@@ -8,6 +8,6 @@ jQuery SHA256 is a plugin based on the Javascript SHA256 implementation by [Ange
 
 ## License
 
-The CoolInput plugin is Distributed under the terms of the [GNU General Public License](http://www.opensource.org/licenses/http://www.gnu.org/licenses/gpl-3.0.html)
+The SHA256 plugin is Distributed under the terms of new [BSD License](http://www.opensource.org/licenses/bsd-license.php).
 
 Copyright (c) 2009 [Alex Weber](http://alexweber.com.br)
