@@ -1,4 +1,4 @@
-# SHA56
+# SHA256
 
 jQuery SHA256 is a plugin based on the Javascript SHA256 implementation by [Angel Marin and Paul Johnston](http://anmar.eu.org/projects/jssha2/). It enables SHA256 hashing of a value and also generation of a keyed-Hash Message Authentication Code (HMAC) using a key along with the value.
 
