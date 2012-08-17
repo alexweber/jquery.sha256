@@ -1,7 +1,7 @@
 /**
  * SHA256 Hash Algorithm Plugin
  *
- * @version 1.0 (06/09/2009)
+ * @version 1.1 (17/08/2012)
  * @requires jQuery v1.2.6+
  * @author Alex Weber <alexweber.com.br>
  * @copyright Copyright (c) 2008-2009, Alex Weber
