@@ -114,7 +114,7 @@
 	var core_hmac_sha256 = function(key, data) {
 		var bkey = str2binb(key);
 		if(bkey.length > 16) {
-			bkey = core_sha1(bkey, key.length * chrsz);
+			bkey = core_sha256(bkey, key.length * chrsz);
 		}
 		var ipad = Array(16), opad = Array(16);
 		for(var i = 0; i < 16; i++) {
