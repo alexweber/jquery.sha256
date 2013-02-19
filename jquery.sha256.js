@@ -17,7 +17,7 @@
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
  * in FIPS 180-2
  * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
- * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet - fix format
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
  */
 (function ($) {
 	var chrsz = 8;
