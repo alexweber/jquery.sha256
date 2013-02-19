@@ -1,7 +1,7 @@
 /**
  * SHA256 Hash Algorithm Plugin
  *
- * @version 1.0 (06/09/2009)
+ * @version 1.1 (17/08/2012)
  * @requires jQuery v1.2.6+
  * @author Alex Weber <alexweber.com.br>
  * @copyright Copyright (c) 2008-2009, Alex Weber
@@ -19,11 +19,6 @@
  * Version 2.2-beta Copyright Angel Marin, Paul Johnston 2000 - 2009.
  * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
  *
- */
-/**
- * Arjun Balla
- * Downloaded from https://github.com/alexweber/jquery.sha256.git and made little
- * changes
  */
 (function ($) {
 	var chrsz = 8;
@@ -177,21 +172,21 @@
 		return string;
 	};
 
-	// standard sha256 implementation: var x = $.sha256(data);
-	// standard sha256hmac implementation: var x = $.sha256hmac(key, dat);
+	// standard sha256hex implementation: var x = $.sha256hex(data);
+	// standard sha256hmachex implementation: var x = $.sha256hmachex(key, dat);
 	$.extend({
-		sha2562hex : function (string) {
+		sha256hex : function (string) {
 			string = prep(string);
 			return binb2hex(core_sha256(str2binb(string), string.length * chrsz));
 		},
-		sha2562b64 : function (string) {
+		sha256b64 : function (string) {
 			string = prep(string);
 			return binb2b64(core_sha256(str2binb(string), string.length * chrsz));
 		},
 		/*
 		 *
 		 */
-		sha256hmac2hex : function (key, data) {
+		sha256hmachex : function (key, data) {
 			key = prep(key);
 			data = prep(data);
 			return binb2hex(core_hmac_sha256(key, data));
@@ -199,7 +194,7 @@
 		/*
 		 *
 		 */
-		sha256hmac2b64 : function (key, data) {
+		sha256hmacb64 : function (key, data) {
 			key = prep(key);
 			data = prep(data);
 			return binb2b64(core_hmac_sha256(key, data));
@@ -208,12 +203,20 @@
 			chrsz = parseInt(bits) || 8;
 		}
 	});
-	// alternative sha256 implementation: var x = value.sha256();
-	$.fn.sha2562b64 = function (bits) {
+	// alternative sha256b64 implementation: var x = value.sha256b64();
+	$.fn.sha256b64 = function (bits) {
 		// change bits
 		$.sha256config(bits);
-		var string = prep($(this).val());
-		var val = $.sha2562b64(string);
+		var val = $.sha256b64($(this).val());
+		// reset bits, this was a one-time operation
+		$.sha256config(8);
+		return val;
+	};
+	// alternative sha256b64 implementation: var x = value.sha256b64();
+	$.fn.sha256hex = function (bits) {
+		// change bits
+		$.sha256config(bits);
+		var val = $.sha256hex($(this).val());
 		// reset bits, this was a one-time operation
 		$.sha256config(8);
 		return val;
