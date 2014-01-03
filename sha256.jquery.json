@@ -1,0 +1,21 @@
+{
+  "name": "sha256",
+  "version": "1.1.0",
+  "title": "jQuery sha256",
+  "author": {
+    "name": "Alex Weber",
+    "url": "http://github.com/alexweber"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://opensource.org/licenses/bsd-license.php"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.3.0"
+  },
+  "description": "jQuery SHA256 is a plugin based on the Javascript SHA256 implementation by Angel Marin and Paul Johnston. It enables SHA256 hashing of a value and also generation of a keyed-Hash Message Authentication Code (HMAC) using a key along with the value.",
+  "homepage": "http://github.com/alexweber/jquery.sha256",
+  "bugs": "https://github.com/alexweber/jquery.sha256/issues"
+}
