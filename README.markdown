@@ -5,7 +5,7 @@ jQuery SHA256 is a plugin based on the Javascript SHA256 implementation by [Ange
 * Requires jQuery 1.3+
 
 ## Install with bower
-`bower install jquery-sha256`
+`bower install jquery.sha256`
 
 ## License
 
